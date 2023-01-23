@@ -1,0 +1,55 @@
+\section{Intro}
+\begin{itemize}
+    \item My OH is Monday 1-2 and Tuesday 3-4 in Cory 212. 
+    \item Email is first.last@
+    \item 3rd year cs + math major 
+    \item hobbies?
+\end{itemize}
+
+\subsection{Some CS70 advice}
+\begin{itemize}
+    \item Goal: enhance problem solving techniques/approach
+    \item Don't fall behind on content, catching up will not be fun
+    \item problems, problems, more problems
+    \item Ask lots of questions (imperative for strong foundation)
+    \item Don't stress, we're in this ride together
+\end{itemize}
+
+\section{Propositional Logic}
+Relevant notation: \begin{itemize}
+    \item $\land$ = and 
+    \item $\lor$ = or 
+    \item $\neg$ = not 
+    \item $\implies$ = implies
+    \item $\exists$ = there exists
+    \item $\forall$ = forall
+    \item $\N$ = natural numbers $\{0, 1, \ldots \}$ 
+    \item $a|b$ = $a$ divides $b$
+\end{itemize}
+
+$P \implies Q$ is an example of an implication. We can read this as ``If $P$, then $Q$.'' An implication is false only when $P$ is true and $Q$ is false. If $P$ is false, the implication is vacuously true. 
+
+\begin{definition}[Contrapositive]
+    If $P \implies Q$ is an implication, then the implication $\neg Q \implies \neg P$ is known as the \textbf{contrapositve}.
+\end{definition}
+
+An important identity is that $P \implies Q \equiv \neg Q \implies \neg P$. 
+
+\section{Proofs}
+Induction will be in its own section.
+
+Different methods. 
+
+\subsection{Direct proof}
+Want to show $P \implies Q$ by assuming $P$ and logically concluding $Q$. 
+
+\subsection{Contraposition}
+Want to show $P \implies Q$ by equivalently proving $\neg Q \implies \neg P$. 
+
+\subsection{Contradiction}
+Want to show $P$. We do this by assuming $\neg P$ and concluding $R \land \neg R$. 
+
+Why? Idea is that if we can show the implication $\neg P \implies (R \land \neg R)$ is True, this is the same as showing $\neg P \implies F$ is True. The contraposition gives $T \implies P$. 
+
+\subsection{Cases}
+Break up a problem into multiple cases i.e. odd vs even. 
