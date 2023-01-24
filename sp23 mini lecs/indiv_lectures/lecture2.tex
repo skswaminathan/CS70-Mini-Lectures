@@ -15,5 +15,10 @@ Sometimes proving $P(n) \implies P(n+1)$ is not straightforward with induction. 
 
 \subsubsection{Strong Induction}
 \begin{itemize}
-    \item Prove $P(0)$ is true (or relevant base cases), then $\forall n \left(\left(P(0) \land P(1) \land \dots \land P(n)\right) \implies P(n+1)\right)$.   
+    \item Prove $P(0)$ is true (or relevant base cases), then $\forall n \left(\left(P(0) \land P(1) \land \dots \land P(n)\right) \implies P(n+1)\right)$. 
+    \item Dominoes analogy, but emphasis on the difference between weak and strong induction (assuming middle domino works vs everything from start to middle).   
 \end{itemize}
+
+\subsubsection{Weak vs Strong}
+
+A common point of confusion is when one should use strong induction in lieu of weak induction. Strong induction \textbf{always} works whenever weak induction works. However, there may be scenarios in which the induction hypothesis to prove $n=k+1$ requires more information than just $n=k$. A scenario like this requires strong induction.
