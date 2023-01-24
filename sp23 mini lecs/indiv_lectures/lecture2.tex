@@ -1,0 +1,19 @@
+\section{DIS 1A}
+
+\subsection{Induction}
+Goal of induction is to show $\forall n P(n)$. 
+\subsubsection{(Weak) Induction}
+\begin{itemize}
+    \item Prove $P(0)$ is true (or relevant base cases), then $\forall n \in \N \left(P(n) \implies P(n+1)\right)$. 
+    \item Induction dominoes analogy! 
+    \item Sometimes you might have multiple base cases (Problem about $4x+5y$ in Notes 3)
+\end{itemize}
+
+\subsubsection{Strengthening the Hypothesis}
+
+Sometimes proving $P(n) \implies P(n+1)$ is not straightforward with induction. In such a scenario, we can try to introduce a (stronger) statement $Q(n)$. We want to construct $Q$ such that $Q(n) \implies P(n)$. Inducting on $Q$ proves $P$. 
+
+\subsubsection{Strong Induction}
+\begin{itemize}
+    \item Prove $P(0)$ is true (or relevant base cases), then $\forall n \left(\left(P(0) \land P(1) \land \dots \land P(n)\right) \implies P(n+1)\right)$.   
+\end{itemize}
