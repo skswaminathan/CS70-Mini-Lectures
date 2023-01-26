@@ -1,0 +1,54 @@
+\section{DIS 1B}
+
+\subsection{Stable Matching}
+
+Cool application of induction. 
+
+\subsubsection{The Propose and Reject Algorithm}
+
+Suppose jobs proposes to candidates. 
+
+\begin{itemize}
+    \item both jobs and candidates have a list of preferences 
+    \item every day a job that doesn't have a deal with a candidate will propose to the next best candidate on its preference list
+    \item every candidate will tentatively ``waitlist'' the offer from the job (put it on a string)
+    \item if a candidate has multiple offers, they will choose the one they prefer the most
+    \item the algorithm ends when every candidate has a job on their ``waitlist'' (all these WLs becomes acceptances)
+\end{itemize}
+
+(walk through q1 of dis as a class to visualize this)
+
+\subsubsection{Stability}
+\begin{definition}[Rogue Couple]
+    A job-candidate pair $(J,C)$ is denoted as a \textbf{rogue couple} if they prefer each other over their final assignment in a stable matching instance. 
+\end{definition}
+
+\begin{definition}[Unstable]
+    A matching that has at least one rogue couple is considered \textbf{unstable}.
+\end{definition}
+
+Conversely, a \textbf{stable} matching is one that has no rogue couples. 
+
+Some tricky vocab stuff like stable matching instance. 
+
+\begin{lemma}[Improvement]
+    If a candidate has a job offer, then they will always have an offer from a job at least as good as the one they have right now. 
+\end{lemma}
+
+Matchings produced by the algorithm are always \textbf{stable}. 
+
+\subsubsection{Optimality}
+
+The propose and reject algorithm is proposer \textit{optimal} and receiver \textit{pessimal}.
+
+\begin{definition}[optimal]
+    A pairing is optimal for a group if each entity is paired with who it most prefers  while maintaining stability. 
+\end{definition}
+
+Can be thought of a (well that's the best I could do) analogy. 
+
+\begin{definition}[pessimal]
+    A pairing is pessimal for a group if each entity is paired with who it least prefers while maintaining stability.
+\end{definition}
+
+Can be thought of a (well it can't get worse than this) analogy. 
