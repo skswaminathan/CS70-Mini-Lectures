@@ -52,3 +52,44 @@ Can be thought of a (well that's the best I could do) analogy.
 \end{definition}
 
 Can be thought of a (well it can't get worse than this) analogy. 
+
+\subsubsection{Potpourri}
+It is possible that there exists a stable matching instance that is neither job optimal nor candidate pessimal. 
+
+Consider the following preferences
+
+\[\begin{array}{|c|c|}
+    \hline
+    \text{Jobs} & \text{Preferences} \\
+    \hline
+    A & 1 > 2 > 3 \\
+    \hline 
+    B & 2 > 3 > 1\\
+    \hline
+    C & 3 > 1 > 2\\
+    \hline
+\end{array}
+    \qquad 
+    \begin{array}{|c|c|}
+        \hline
+        \text{Candidates} & \text{Preferences} \\
+        \hline
+        1 & B > C > A  \\
+        \hline 
+        2 & C > A > B \\
+        \hline
+        3 & A > B > C \\
+        \hline
+    \end{array}\]  
+
+The matching above can generate (at least) 3 stable matching instances \begin{align*}
+    S &= \{(A,1), (B,2), (C,3)\} \\
+    T &= \{(A,3), (B,1), (C,2)\} \\
+    U &= \{(A,2), (B,3), (C,1)\}. 
+\end{align*}
+
+We see \begin{itemize}
+    \item $S$ is job-optimal/candidate-pessimal (result of running propose and reject with jobs proposing to candidates)
+    \item $T$ is candidate-optimal/job-pessimal (result of running propose and reject with candidates proposing to jobs)
+    \item $U$ is neither optimal nor pessimal for both candidates and jobs ($S$ and $T$) corroborate that. 
+\end{itemize}
