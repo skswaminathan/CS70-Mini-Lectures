@@ -1,0 +1,58 @@
+\section{DIS 2A}
+\subsection{Graphs}
+
+\subsubsection{Notation}
+\begin{itemize}
+    \item $V$ denotes set of vertices (points)
+    \item $E$ denotes set of edges (lines)
+    \item $|V|$ denotes size of set of vertices i.e number of vertices; $|E|$ similarly
+    \item Graph $G$ with vertices $V$ and edges $E$ is denoted $G = (V,E)$. 
+\end{itemize}
+
+\subsubsection{Vocabulary}
+
+\begin{definition}[Path]
+    A \textbf{path} is a sequence of edges. In CS70, we assume a path is \textit{simple} which means no repeated vertices. 
+\end{definition}
+\begin{definition}[Cycle]
+    A \textbf{cycle} is a simple path that starts and ends at the same vertex. 
+\end{definition}
+\begin{definition}[Walk]
+    A \textbf{walk} is any arbitrary connected sequence of edges. 
+\end{definition}
+\begin{definition}[Tour]
+    A \textbf{tour} is a walk that starts and end at the same vertex. 
+\end{definition}
+\begin{definition}[Connected]
+    A graph is \textbf{connected} if there exists a path between any two distinct vertices. 
+\end{definition}
+\begin{definition}[Eulerian Walk]
+    An \textbf{Eulerian walk} is a walk covering all edges without repeating any. 
+\end{definition}
+\begin{definition}[Eulerian Tour]
+    An \textbf{Eulerian tour} is an Eulerian walk that starts and ends at the same vertex. 
+\end{definition}
+
+To summarize,
+
+\[\begin{tabular}{rcccc}
+    & no repeated vertices & no repeated edges & start = end & all edges \\\midrule
+Walk & & & & \\\midrule
+Path & \checkmark & \checkmark & & \\\midrule
+Tour & & & \checkmark & \\\midrule
+Cycle & \checkmark$^\ast$ & \checkmark & \checkmark & \\\midrule
+Eulerian Walk & & \checkmark & & \checkmark \\\midrule
+Eulerian Tour & & \checkmark & \checkmark & \checkmark
+\end{tabular} \]
+
+(*except for start and end vertices)
+
+\begin{theorem}[Euler's Theorem]
+    An undirected graph $G$ has an Eulerian tour iff $G$ is connected and all its vertices have even degree. 
+\end{theorem}
+
+\begin{definition}[Bipartite]
+    A graph is considered bipartite if $V$ can be partitioned into two sets $L$ and $R$ where $V = L \cup R$ such that there are no edges between vertices in $L$ and no edges between vertices in $R$. 
+\end{definition}
+
+We will discuss trees, planarity, coloring, and hypercubes in the next discussion. 
