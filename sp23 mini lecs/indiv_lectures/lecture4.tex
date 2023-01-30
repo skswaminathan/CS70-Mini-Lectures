@@ -57,4 +57,20 @@ The requires condition for an Eulerian walk is that we have exactly 2 vertices o
     A graph is considered bipartite if $V$ can be partitioned into two sets $L$ and $R$ where $V = L \cup R$ such that there are no edges between vertices in $L$ and no edges between vertices in $R$. 
 \end{definition}
 
+\subsubsection{Relevant Potpourri}
+
+Some other relevant information. 
+
+\begin{definition}[Degree]
+    The \textbf{degree} of a vertex $v$ denoted $\deg(v)$ is defined to be the number of incident edges to $v$. 
+\end{definition}
+
+\begin{lemma}[Handshake]
+    \[ \sum_{v \in V} \deg(v) = 2|E|. \]
+\end{lemma}
+
+The idea of a degree (with no adjective) is only well-defined for undirected graphs. We see for directed graphs it's a little funky; we need to introduce the concept of indegree and outdegree. 
+
+In a directed graph, the number of outgoing edges equals the number of ingoing edges. 
+
 We will discuss trees, planarity, coloring, and hypercubes in the next discussion. 
