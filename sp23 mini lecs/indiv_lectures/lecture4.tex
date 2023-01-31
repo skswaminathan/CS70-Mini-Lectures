@@ -57,6 +57,22 @@ The requires condition for an Eulerian walk is that we have exactly 2 vertices o
     A graph is considered bipartite if $V$ can be partitioned into two sets $L$ and $R$ where $V = L \cup R$ such that there are no edges between vertices in $L$ and no edges between vertices in $R$. 
 \end{definition}
 
+\subsubsection{The holy grail for graph proofs}
+
+Induct, induct, induct, and induct.
+
+\begin{itemize}
+    \item Think about what you want to induct on (edges or vertices???)
+    \item Base case (read the problem carefully!)
+    \item Prove for $n$ by going from $n \to n-1 \to I.H. \to n$. 
+    \begin{itemize}
+        \item \textbf{DO NOT} go from $n-1 \to n$ directly.
+        \item Why? Build-up error!
+        \item Good example of build-up error when trying to prove ``if every vertex of a graph has degree at least 2, then there exists a cycle of length 3.'' Any attempt at induction will give us a false proof but we cannot make square from triangle! 
+        \item It's also a logistical nightmare lol (in the times it might accidentally work). Try generating all 5-vertex trees from all 4-vertex trees yikes. 
+    \end{itemize}
+\end{itemize}
+
 \subsubsection{Relevant Potpourri}
 
 Some other relevant information. 
