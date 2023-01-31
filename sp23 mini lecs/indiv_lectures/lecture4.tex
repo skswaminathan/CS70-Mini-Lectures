@@ -35,14 +35,15 @@
 
 To summarize,
 
-\[\begin{tabular}{rcccc}
-    & no repeated vertices & no repeated edges & start = end & all edges \\\midrule
-Walk & & & & \\\midrule
-Path & \checkmark & \checkmark & & \\\midrule
-Tour & & & \checkmark & \\\midrule
-Cycle & \checkmark$^\ast$ & \checkmark & \checkmark & \\\midrule
-Eulerian Walk & & \checkmark & & \checkmark \\\midrule
-Eulerian Tour & & \checkmark & \checkmark & \checkmark
+\[\begin{tabular}{rccccc}
+    & no repeated vertices & no repeated edges & start = end & all edges & all vertices \\\midrule
+Walk & & & & & \\\midrule
+Path & \checkmark & \checkmark & & & \\\midrule
+Tour & & & \checkmark & & \\\midrule
+Cycle & \checkmark$^\ast$ & \checkmark & \checkmark & &\\\midrule
+Eulerian Walk & & \checkmark & & \checkmark &\\\midrule
+Eulerian Tour & & \checkmark & \checkmark &\checkmark & \\ \midrule 
+Hamiltonian Tour & \checkmark & \checkmark & \checkmark & &\checkmark  
 \end{tabular} \]
 
 (*except for start and end vertices)
