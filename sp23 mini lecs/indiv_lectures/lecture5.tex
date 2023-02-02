@@ -1,0 +1,62 @@
+\section{DIS 2B}
+
+\subsection{Trees}
+A graph $G = (V,E)$ is a Tree if any of the statements below is true. TFAE (The following are equivalent):
+
+\begin{itemize}
+    \item $G$ is connected and has no cycles
+    \item $G$ is connected and $|E| = |V| - 1$
+    \item $G$ is connected and removing a single edge disconnects $G$
+    \item $G$ has no cycles and adding a single edge creates a cycle
+\end{itemize}
+
+\begin{definition}
+    A leaf is a node of degree 1. 
+\end{definition}
+A consequence of above is that every tree has at least 2 leaves. 
+
+\subsection{Planarity}
+\begin{definition}[planar]
+    A graph is \textbf{planar} if it can be drawn without any edge crossings. 
+\end{definition}
+
+
+\begin{theorem}[Euler]
+    For every connected planar graph, $f + v = e + 2$.
+\end{theorem}
+
+\begin{corollary}
+    If a graph is planar, then $e \le 3v - 6$. 
+\end{corollary}
+
+\begin{theorem}[Kuratowski]
+    A graph is non-planar iff it contains $K_5$ or $K_{3,3}$. 
+\end{theorem}
+(draw the two above graphs on the board)
+
+The notation $K_x$ denotes a complete graph with $x$ vertices. 
+
+\begin{definition}[complete graph]
+    A \textbf{complete graph} is a graph where all possible edges exist. Formally, in graph $G = (V,E)$, for any distinct $u,v \in V$, then $\{u,v\} \in E$. 
+\end{definition}
+
+\subsection{Coloring}
+Two types: edge and vertex 
+\begin{itemize}
+    \item edge: color edges so that no two adjacent edges have the same color
+    \item vertices: color vertices so that no two adjacent vertices have the same color 
+\end{itemize}
+
+
+\begin{theorem}[4 color theorem]
+    If a graph is planar, then it can be colored with 4 (or less) colors. 
+\end{theorem}
+
+\subsection{Hypercubes}
+A hypercube of dimension $n$ is a graph whose vertices are bitstrings of length $n$. An edge between two vertices exists iff the two vertices differ at exactly 1 bit. 
+
+(draw $n = 1, 2, 3$ on the board)
+
+We can see that $|V| = 2^n$ and $|E| = n 2^{n-1}$. 
+
+Give some motivation on induction on hypercubes. 
