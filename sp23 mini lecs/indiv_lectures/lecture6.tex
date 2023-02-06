@@ -1,0 +1,48 @@
+\section{DIS 3A} 
+
+\begin{definition}[Greatest Common Divisor]
+    The \textbf{greatest common divisor} (gcd) of two integers $a, b$ is the greatest $d \in \Z$ such that $d|a$ and $d|b$. 
+\end{definition}
+
+How does one efficiently calculate the GCD?
+
+\begin{algothm}[Euclidean Algorithm]
+    \begin{algorithmic}
+    \Function{GCD}{$a,b$}
+    \If{$b = 0$}
+        \State \Return $a$
+    \EndIf
+    \State \Return \Call{GCD}{$b, a \mod b$}
+    \EndFunction
+    \end{algorithmic}
+\end{algothm}
+
+\subsection{Modular Arithmetic}
+
+The relevant notation we'll be using for this section is expressions of the form \[ a \equiv b \pmod{x} \] reads ``$a$ is equivalent to $b$ mod $x$''. It means that the remainder of $a$ when divided by $x$ equals the remainder of $b$ when divided by $x$. 
+
+An important identity is that \[ a \equiv b \pmod{x} \iff (\exists k \in\Z) (a = b + kx). \]
+
+Talk about the ``clock analogy''. 
+
+\begin{example}
+    We can see a display of some of the properties:
+    \begin{itemize}
+        \item Addition: $7 + 4 \equiv 1 \pmod{5}$
+        \item Subtraction: $7 - 4 \equiv 1 \pmod{2}$ 
+        \item Multiplication: $2 \cdot 3 \equiv 0 \pmod{6}$. 
+        \item Division??
+    \end{itemize}
+\end{example}
+
+In modular arithmetic, division is not well-defined. The opposite of multiplication is multiplying by the modular inverse. 
+
+\begin{definition}[modular inverse]
+    The value $a$ is the \textbf{modular inverse} of $x$ with respect to mod $m$ if \[ ax \equiv 1 \pmod{m}. \]
+\end{definition}
+
+Does an inverse always exist? No. 
+
+\begin{theorem}
+    Let $x$ and $m$ be positive integers. Then $x^{-1} \pmod{m}$ exists and is unique only if $\gcd(x,m) = 1$. 
+\end{theorem}
