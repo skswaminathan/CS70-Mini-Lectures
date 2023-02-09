@@ -1,0 +1,52 @@
+\section{DIS 3B}
+
+More mods. 
+
+\subsection{Modular inverse}
+\begin{lemma}[Bézout]
+    For integers $x,y$ such that $\gcd(x,y) = d$, there exist integers $a$ and $b$ that obey \[ ax + by = d. \]
+\end{lemma}
+
+We care about the case when $\gcd(x,y) = d = 1$. 
+
+Why? This is how we can find the modular inverse. 
+
+\vspace{3mm}
+
+If $ax + by = 1$, taking$\mod x$ gives us \[ by \equiv 1 \pmod{x} \implies b \equiv y^{-1} \pmod{x}. \] Similarly, taking$\mod y$ gives us \[ ax \equiv 1 \pmod{y} \implies a \equiv x^{-1} \pmod{y}. \]
+
+Takeaway: the values of $a$ and $b$ we will solve for (Q1 on discussion) give us the inverse of $x$ with respect to $y$ and vice versa. 
+
+\subsection{Chinese Remainder Theorem (CRT)}
+
+\begin{theorem}[CRT]
+    For relatively prime integers $m_1, m_2, \ldots, m_n$, the modular system \begin{align*}
+        x &\equiv a_1 \pmod{m_1} \\
+        x &\equiv a_2 \pmod{m_2} \\
+        &\phantom{=}\vdots \\
+        x &\equiv a_n \pmod{m_n} 
+    \end{align*} has a unique solution $x \pmod{m_1m_2\cdots m_n}$. 
+\end{theorem}
+
+How do we solve the system above? Discussion Q2...
+
+...or we can solve them a faster way (not taught in the course lol)
+
+\begin{example}
+    Suppose we take the first two systems from Q2 on discussion. 
+
+\begin{align*}
+        x &\equiv 1\pmod{3} \\
+        x &\equiv 3 \pmod{7}. 
+    \end{align*}
+
+    Since $\gcd(3,7) = 1$, CRT tells us $x$ has a unique solution mod 21. The first equation tells us there exists some integer $k$ such that $x = 1 + 3k$. Plugging this into the second equation we have \[ 1 + 3k \equiv 3 \pmod{7} \implies k \equiv 3 \pmod{7}. \] Plugging in $k = 3$ gives $x \equiv 10 \pmod{21}$. 
+
+    \vspace{5mm}
+    
+    If we wanted to solve entirety of Q2 this way, we then apply the same trick above to the systems 
+    \begin{align*}
+        x &\equiv 10\pmod{21} \\
+        x &\equiv 4 \pmod{11}. 
+    \end{align*}
+\end{example}
