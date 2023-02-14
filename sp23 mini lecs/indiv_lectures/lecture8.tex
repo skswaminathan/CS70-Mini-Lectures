@@ -1,0 +1,34 @@
+\section{DIS 4A}
+
+\subsection{Fermat's Little Theorem}
+
+A relevant theorem in modular arithmetic that will help us with RSA is Fermat's Little Theorem (FLT).
+
+\begin{theorem}[Fermat's Little Theorem (FLT)]
+    For prime $p$ and $a \in \{1, 2, \ldots, p-1\}$, it follows \[ a^{p-1} \equiv 1 \pmod{p}. \]
+\end{theorem}
+
+\subsection{RSA}
+Objective: Alice transfers info to Bob without Eve cracking it. 
+\subsubsection{The algorithm}
+Here's a detailed outline of how the scheme works for RSA with 2 primes:
+\begin{enumerate}
+    \item Entire world knows about a public key $(N,e)$ where $N = pq$ for primes $p$ and $q$ such that $\gcd(e, (p-1)(q-1)) = 1.$
+    \item Alice and Bob meet in private, and Alice tells Bob what $p$ and $q$ are.
+    \item On his own time, Bob computes $(p-1)(q-1)$ and then calculates \[ d = e^{-1} \pmod{(p-1)(q-1)}. \] (Think about why we know such a $d$ must exist)
+    \item To encrypt her message $x$, Alice sends $E(x)$ to Bob where \[ E(x) = x^{e} \pmod{N}. \]
+    \item To decrypt the message received $y$, Bob calculate $D(y)$ where \[ D(y) = y^{d} \pmod{N}. \]
+    
+    High level idea of why this works: \begin{align*}
+        D(E(x)) &= D(x^{e}) \pmod{N}\\
+        &= x^{ed} \pmod{N} \\
+        &= x \pmod{N}.
+    \end{align*}
+    More detailed proof by cases in page 3? of Note 7. 
+\end{enumerate}
+
+\subsection{Why does RSA work?}
+\begin{itemize}
+    \item $N$ is too large to brute force solve $x$ where $y = x^{e} \pmod{N}$. 
+    \item $N$ is too large to factor into $p \cdot q$. Factorization is an intractable problem!
+\end{itemize}
