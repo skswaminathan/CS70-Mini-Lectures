@@ -5,7 +5,9 @@
 A relevant theorem in modular arithmetic that will help us with RSA is Fermat's Little Theorem (FLT).
 
 \begin{theorem}[Fermat's Little Theorem (FLT)]
-    For prime $p$ and $a \in \{1, 2, \ldots, p-1\}$, it follows \[ a^{p-1} \equiv 1 \pmod{p}. \]
+    For prime $p$ and $a \in \{1, 2, \ldots, p-1\}$, it follows \[ a^{p} \equiv a \pmod{p}. \]
+
+    Special case, if $a$ is not divisible by $p$, then \[ a^{p-1} \equiv 1 \pmod{p}. \]
 \end{theorem}
 
 \subsection{RSA}
