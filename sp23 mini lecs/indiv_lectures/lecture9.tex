@@ -1,0 +1,29 @@
+\section{DIS 4B}
+
+\subsection{Polynomials}
+A single variable expression of the form \[ p(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1x + a_0 \] for reals $a_i$ and $x$ is denoted a polynomial. 
+\begin{definition}[degree]
+    The degree of a polynomial $p(x)$, often denoted $\deg(p)$, is the value of the largest exponent of $p(x)$. 
+\end{definition}
+For example, any quadratic function has degree 2. 
+
+We mainly explore two relevant properties in this section.
+
+\begin{note}[Proprety 1]
+    If $\deg(p) = d$, then $p(x)$ has at most $d$ roots.
+\end{note}
+\begin{note}[Property 2]
+    Given $d+1$ distinct $(x,y)$ points, we can find/compute a unique degree $d$ polynomial. 
+\end{note}
+
+The concept of secret sharing follows directly from property 2. 
+
+\subsection{Finite Fields}
+We will be using notation $GF(p)$ which represents a finite field (aka Galois Field) with respect to modulo $p$. All operations in this field are done in $\mod p$. We want to convert all fractions to their modular inverse equivalents. 
+
+\begin{example}
+    If we're working in $GF(5)$, we remark \[ 7x^2 \equiv 2x^2 \pmod{5} \] and \[ \frac{1}{8} \equiv 8^{-1} \equiv 3^{-1} \equiv 2 \pmod{5}. \]
+\end{example}
+
+\subsection{Lagrange Interpolation}
+For $d+1$ points of the form $(x_1, y_1), \ldots, (x_{d+1}, y_{d+1})$, we can construct a unique degree $d$ polynomial \[ p(x) = \sum_{i=1}^{d+1} y_i p_{i}(x) \] where \[ p_{i}(x) = \frac{\prod_{j \neq i} x - x_j}{\prod_{j \neq i} x_i - x_j}. \]
