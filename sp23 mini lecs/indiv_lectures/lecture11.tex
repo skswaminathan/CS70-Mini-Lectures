@@ -1,8 +1,7 @@
-\section{DIS 5B}
+\section{DIS 5B (Countability)}
 
-\subsection{Countability}
 
-\subsubsection{Terminology}
+\subsection{Terminology}
 For all definitions, we use a function $f: A \to B$. $A$ is called the \textbf{domain} and $B$ is called the \textbf{codomain}. 
 \begin{definition}[Injection (one-to-one)]
     A function $f$ is \textit{injective} or \textit{one-to-one} if no two points in the domain map to the same point in the codomain. Mathematically for all $a \in A$ and $b \in A$, \[ f(a) = f(b) \implies a = b. \] 
@@ -19,19 +18,21 @@ For all definitions, we use a function $f: A \to B$. $A$ is called the \textbf{d
 \end{definition}
 Two sets $A$ and $B$ have the same cardinality (size) if there exists a bijection between $A$ and $B$. Another way is to show $|A| \le |B|$ and $|B| \le |A|$ (this is how we prove $|\N| = |\Q|$). 
 
-\subsubsection{The Countable}
+\subsection{The Countable}
 A set $S$ is \textbf{countable} if there exists a bijection between $S$ and $\N$ or another countable set. The main idea is this concept of enumeration. If we can find a way to ``enumerate'' or number a set, we say it's countable. 
 
 Note: countable sets may be infinite!
 
-Some examples of common countable sets: $\N, \Q, \Z, \Z \times \Z$, set of all finite binary strings, set of all polynomials with coefficients in $\N$. 
+Some examples of common countable sets: $\N, \Q, \Z, \Z \times \Z$, set of all finite length bit strings, set of all polynomials with coefficients in $\N$. 
 
-\subsubsection{The Uncountable}
+\subsection{The Uncountable}
 Effectively, the sets that aren't countable are considered \textbf{uncountable}. 
 
-Common uncountable sets: power set, $\R$
+Common uncountable sets: power set, $\R$, set of infinite length bit strings
 
 How do we prove a set $S$ is uncountable. In this class, either we show $|S| > |\N|$ or... 
 
-\subsubsection{Cantor Diagonalization}
-...Cantor Diagonalization. The main idea of Cantor is to show that we can always create a new number that belongs in $S$ that was not originally in $S$. As a result, we cannot possibly fathom how large $S$ is and enumerate all of its entries since we can always create new entries based on all the ones already in $S$. (Lot of words, walk through visual example on board). 
+\subsection{Cantor Diagonalization}
+...Cantor Diagonalization. The main idea of Cantor is to show that we can always create a new number that belongs in $S$ that was not originally in $S$. As a result, we cannot possibly fathom how large $S$ is and enumerate all of its entries since we can always create new entries based on all the ones already in $S$. 
+
+(Lot of words, walk through visual example on board). 
