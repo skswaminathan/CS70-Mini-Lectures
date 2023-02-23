@@ -1,0 +1,37 @@
+\section{DIS 5B}
+
+\subsection{Countability}
+
+\subsubsection{Terminology}
+For all definitions, we use a function $f: A \to B$. $A$ is called the \textbf{domain} and $B$ is called the \textbf{codomain}. 
+\begin{definition}[Injection (one-to-one)]
+    A function $f$ is \textit{injective} or \textit{one-to-one} if no two points in the domain map to the same point in the codomain. Mathematically for all $a \in A$ and $b \in A$, \[ f(a) = f(b) \implies a = b. \] 
+\end{definition}
+\begin{definition}[Surjective (onto)]
+    A function $f$ is \textit{surjective} or \textit{onto} if every point in the codomain has a point in the domain that maps to it. Mathematically, for all $b \in B$ there exists an $a \in A$ such that $f(a) = b$. 
+\end{definition}
+\begin{definition}[Bijective (one-to-one correspondence)]
+    A function $f$ is \textit{bijective} or has a \textit{one-to-one correspondence} if it is both injective (one-to-one) and surjective (onto). 
+\end{definition}
+
+\begin{definition}[Cardinality]
+    The \textbf{cardinality} of a set $A$, denoted $|A|$, is equal to the number of elements in the set. 
+\end{definition}
+Two sets $A$ and $B$ have the same cardinality (size) if there exists a bijection between $A$ and $B$. Another way is to show $|A| \le |B|$ and $|B| \le |A|$ (this is how we prove $|\N| = |\Q|$). 
+
+\subsubsection{The Countable}
+A set $S$ is \textbf{countable} if there exists a bijection between $S$ and $\N$ or another countable set. The main idea is this concept of enumeration. If we can find a way to ``enumerate'' or number a set, we say it's countable. 
+
+Note: countable sets may be infinite!
+
+Some examples of common countable sets: $\N, \Q, \Z, \Z \times \Z$, set of all finite binary strings, set of all polynomials with coefficients in $\N$. 
+
+\subsubsection{The Uncountable}
+Effectively, the sets that aren't countable are considered \textbf{uncountable}. 
+
+Common uncountable sets: power set, $\R$
+
+How do we prove a set $S$ is uncountable. In this class, either we show $|S| > |\N|$ or... 
+
+\subsubsection{Cantor Diagonalization}
+...Cantor Diagonalization. The main idea of Cantor is to show that we can always create a new number that belongs in $S$ that was not originally in $S$. As a result, we cannot possibly fathom how large $S$ is and enumerate all of its entries since we can always create new entries based on all the ones already in $S$. (Lot of words, walk through visual example on board). 
