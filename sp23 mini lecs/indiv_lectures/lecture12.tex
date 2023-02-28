@@ -1,0 +1,46 @@
+%%time for beautiful colors
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{10} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{10}  % for normal
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\lstset{
+language=Python,
+basicstyle=\ttfamily\small,
+commentstyle=\ttfamily\small\color{deepgreen}, 
+otherkeywords={self,None},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepred},
+frame=tb,                         % Any extra options here
+breaklines=true,
+breakatwhitespace=true,
+postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+showstringspaces=false,            % 
+numbers=left
+}
+\section{DIS 6A (Computability)}
+
+Just think of a program like a piece of text (code). 
+
+\subsection{The Halting Problem}
+\begin{definition}[The Halting Problem]
+    We claim that the ability to determine if a program $P$ will terminate on input $x$ is uncomputable. In other words, there does not exist computer program (code) that can determine this. 
+\end{definition}
+
+In this class, the way we will prove a problem is uncomputable is by reducing the Halting Problem to this problem. You will explore in further detail in classes like CS170, that if problem A reduces to problem B, then problem B is at least as computationally hard as problem A. 
+
+In our case, if we can display that the halting problem reduces to our problem (i.e. if we can solve our problem, we can solve the halting problem), then this shows that our problem is uncomputable. 
+
+A basic template to prove some program $\mathrm{Other}$ is uncomputable
+\begin{lstlisting}[language=Python]
+def TestHalt(P, x):
+    def Q(y):
+        run P(x)
+        return <whatever makes TestOther true>
+    return TestOther(Q, y)
+\end{lstlisting}
+
+\subsection{Foreshadowing}
+We will cover counting more in depth next discussion. 
