@@ -1,0 +1,82 @@
+\section{DIS 6B (Counting)}
+
+We introduce a topic in this class called \textbf{the first rule of counting}. This effectively says if I have $k$ boxes with $n_1, n_2, \ldots, n_k$ items per respective box, the number of ways to choose 1 item per box is \[ n_1 \cdot n_2 \cdots n_k. \] 
+
+\begin{example}
+    How many ways can we arrange $n$ books on a bookshelf?
+\end{example}
+
+\begin{definition}[factorial]
+    The factorial function of $n$ denoted $n!$ represents the quantity \[ n! = \prod_{k=1}^{n} k. \]
+\end{definition}
+
+If you want to check your understanding for small values of $n$, 
+\[ \begin{tabular}{|c|c|}
+    \hline
+    $n$ & $n!$ \\
+    \hline
+    0 & 1 \\
+    1 & 1 \\
+    2 & 2 \\
+    3 & 6 \\
+    4 & 24 \\
+    5 & 120 \\
+    6 & 720 \\
+    7 & 5040 \\
+    \hline
+\end{tabular} \]
+
+To shorthand future notation, we will introduce the binomial coefficients. 
+
+How many ways can we choose $k$ objects from a total of $n$ objects? 
+
+\begin{definition}[Binomial Coefficient]
+    The binomial coefficient \[ \binom{n}{k} = \frac{n!}{k!(n-k)!} \] represents the total number of ways we can choose $k$ objects from a total of $n$ objects for $k \le n$. 
+\end{definition}
+
+
+\subsection{A sampling synopsis}
+The number of ways I can pick $k$ objects from a total of $n$ objects is... 
+
+\[ \begin{tabular}{|c|c|c|}
+    \hline
+    & sampling with replacement & sampling without replacement \\
+    \hline
+    order matters & $n^k$ & $n(n-1)\cdots(n-k+1)$ \\
+    \hline
+    order doesn't matter & $\binom{n+k-1}{k-1}$ & $\binom{n}{k}$ \\
+    \hline
+\end{tabular}\]
+
+\subsection{Stars and Bars}
+
+The case when order doesn't matter and we are sampling with replacement is coined \textit{stars and bars}. 
+
+The number of ways to throw $n$ balls into $k$ distinguishable bins is \[ \binom{n+k-1}{k-1}. \]
+
+\textbf{Tip:} When doing stars and bars problems, if the question says the bins must have a minimum number of balls, add the minimum \# of balls to each bin and do stars and bars with the remaining balls. 
+
+\begin{example}
+    If a problem effectively says that each bin has a positive number of balls, we can add 1 ball to each bin and figure out how to distribute the remaining $n-k$ balls. 
+\end{example}
+
+\subsection{Inclusion-Exclusion}
+
+Think of a venn diagram!
+
+For two set case: \[ |A \cup B| = |A| + |B| - |A \cap B|. \]
+
+For three set case: 
+\[ |A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|. \]
+
+\subsection{Combinatorial Proofs}
+
+Focuses on proving mathematical expressions in words with a story. 
+
+\begin{example}
+    Prove that \[ \binom{n}{r} = \binom{n}{n-r}. \]
+\end{example}
+
+Pick the side that looks easier and think about what it means. Now create a story that's equivalently portrayed by the other side. 
+
+To read on your own time: \url{https://drive.google.com/file/d/1Nzbdno6c_6n-T3A7rmqhqdIUWsYck6bO/view?usp=share_link}
