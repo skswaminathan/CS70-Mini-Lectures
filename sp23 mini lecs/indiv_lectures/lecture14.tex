@@ -1,0 +1,29 @@
+\section{DIS 7B (Intro to Probability)}
+
+
+\begin{definition}[sample space]
+    The \textit{sample space} denoted $\Omega$ is the set of all possible outcomes. 
+\end{definition}
+
+Two main properties of probability:
+\begin{itemize}
+    \item $0 \le \Pr{x} \le 1$ for all $x \in \Omega$.
+    \item $\sum_{x \in \Omega} \Pr{x} = 1$. In words, the sum of the probabilities of all outcomes is 1. 
+\end{itemize}
+
+What really is $\Pr{x}$? 
+\[ \Pr{x} = \frac{\text{\# of outcomes satisfying x}}{\text{total \# of outcomes}} = \frac{|X|}{|\Omega|}. \]
+
+\begin{definition}[Complement]
+    The \textit{complement} of an event $X$ is denoted $\overline{X}$ where $\overline{X} = \Omega \setminus X$. 
+\end{definition}
+
+\begin{example}
+    I flip a fair coin 10 times. What's the probability I get at least 1 head? 
+\end{example}
+
+\subsection{Inclusion-Exclusion}
+
+We saw them for counting. We now see them for probability. 
+
+\[ \Pr{A \cup B} = \Pr{A} + \Pr{B} - \Pr{A \cap B} \] and \[ \Pr{A \cup B \cup C} = \Pr{A} + \Pr{B} + \Pr{C} - \Pr{A \cap B} - \Pr{A \cap C} - \Pr{B \cap C} + \Pr{A \cap B \cap C}. \]
