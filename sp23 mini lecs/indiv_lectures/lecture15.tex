@@ -1,0 +1,27 @@
+\section{DIS 8A (Conditional Probability)}
+
+So far we've looked at the likelihood of some event $A$ occurring. What if I want to look at the likelihood of some even $A$ occurring given that some event $B$ occurred? 
+
+This is what spurs the insight into conditional probability. The notation ``$A|B$'' should be read as ``$A$ given $B$''. 
+
+\begin{theorem}[Bayes Rule]
+    \[ \Pr{A|B} = \frac{\Pr{A \cap B}}{\Pr{B}}. \]
+\end{theorem}
+
+A nice corollary of Bayes Rule is \[ \Pr{A|B} = \frac{\Pr{B|A}\Pr{A}}{\Pr{B}}. \]
+
+\subsection{Total Probability}
+We explore an idea called the law of total probability. 
+
+\begin{theorem}[Law of Total Probability]
+    \begin{align*} \Pr{B} &= \Pr{A \cap B} + \Pr{\overline{A} \cap B} \\
+    &= \Pr{B|A}\Pr{A} + \Pr{B|\overline{A}}\Pr{\overline{A}}. 
+    \end{align*}
+\end{theorem}
+
+\subsection{Independence}
+Two events $A$ and $B$ are independent if the occurrence of one does not affect the likelihood of the other. Concretely, for independence TFAE: 
+\begin{enumerate}
+    \item $\Pr{A \cap B} = \Pr{A}\Pr{B}$
+    \item $\Pr{A|B} = \Pr{A}$. 
+\end{enumerate}
