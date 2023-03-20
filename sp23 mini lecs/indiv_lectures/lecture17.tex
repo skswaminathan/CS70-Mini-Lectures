@@ -1,0 +1,33 @@
+\section{DIS 9A (Random Variables)}
+
+Recall from last week, we looked at the concept of independence: two events $A$ and $B$ are independent if knowing whether $B$ occurred tells us nothing about whether $A$ occurred. 
+
+\subsection{Unionized Events}
+\begin{definition}[mutually exclusive]
+    Events $A$ and $B$ are \textbf{mutually exclusive} if $\Pr{A \cap B} = 0$. 
+\end{definition}
+
+\begin{itemize}
+    \item Generally, mutually exclusive events are (almost) never independent.
+    \item Never want to assume a sequence of events are exclusive or independent for that matter. 
+\end{itemize}
+
+\begin{definition}[Union bound]
+    For events $A_1, A_2 \ldots, A_n$, \textbf{union bound} approximation claims \[ \Pr{A_1 \cup A_2 \cup \cdots \cup A_n} \le \Pr{A_1} + \Pr{A_2} + \ldots + \Pr{A_n}. \]
+\end{definition}
+The intuition of above should follow from Inclusion-Exclusion. 
+
+\subsection{Intro to Random Variables}
+For a sample space $\Omega$, a \textit{random variable} $X$ is a function $X: \Omega \to \R$; it maps $X(\omega) \to \R$ for every $\omega \in \Omega$. 
+
+\subsubsection{Distribution of R.V.}
+There are two important things for any R.V. 
+\begin{itemize}
+    \item The set of all values it can take (the $\omega$ values)
+    \item Probabilities with which it takes on each of those values. 
+\end{itemize}
+
+For example, $X = a$ is an \textit{event} that is a set modeled by $S = \{\omega \in \Omega \mid X(\omega) = a\}$. As a result, if I wanted to compute the probability of an event it would follow the form $\Pr{X = a} = \frac{|S|}{|\Omega|}$.  
+
+
+We will work with some well known distributions in discussion today, but I'll formally define them on Thursday. 
