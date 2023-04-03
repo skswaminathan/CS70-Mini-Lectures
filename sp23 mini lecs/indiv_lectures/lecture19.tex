@@ -1,0 +1,29 @@
+\section{DIS 10A (Variance)}
+
+\subsection{Recall}
+Last time we looked at 
+\begin{definition}[Expected Value]
+    The \textit{expected value} of a random variable $X$, denoted $\E{X}$, is the anticipated average value of $X$. Mathematically, \[ \E{X} = \sum_{i \in \Omega} i \cdot \Pr{X = i}. \]
+\end{definition}
+
+We extend this definition slightly to incorporate for a random variable defined by a function $g(\cdot)$. If $X$ is a RV, then so is $g(X)$. 
+
+\begin{theorem}[Law of the Unconscious Statistician (LOTUS)]
+    \[ \E{g(X)} = \sum_{i \in \Omega} g(i) \Pr{X = i}. \]
+\end{theorem}
+
+\subsection{Variance}
+
+Today we introduce a new topic variance. 
+
+\begin{definition}[Variance]
+    The \textit{variance} of a random variable $X$ measures how much on average the variable deviates from its expectation (the mean).
+\end{definition}
+
+The main way we will compute variance is \[ \Var{X} = \E{X^2} - \E{X}^2. \]
+
+If you have taken a statistics class before, you may remark that the standard deviation $\sigma$ is defined as \[ \sigma(X) = \sqrt{\Var{X}}. \]
+
+\subsection{Independence}
+
+If two RVs $X$ and $Y$ are independent, then \[ \Var{X+Y} = \Var{X} + \Var{Y}. \]

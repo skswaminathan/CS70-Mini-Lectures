@@ -1,0 +1,44 @@
+\section{DIS 9B (Distributions and Expectations)}
+
+We will be looking at discrete random variables for the time being. 
+
+\subsection{Well known distributions}
+\subsubsection{Bernoulli}
+Bernoulli RVs either output 0 or 1. If $\Bern{X}{p}$ then \[ \Pr{X = i} = \begin{dcases} p & i = 1 \\ 1-p & i = 0 \\ \end{dcases}.\]
+
+\subsubsection{Binomial}
+Binomial RVs take in a fixed number of trials $n$ and probability of success $p$ and calculate the probability of $i$ successes for all $i \le n$. If $\Bin{X}{n}{p}$, then \[ \Pr{X = i} = \binom{n}{i} p^i(1-p)^{n-i}. \]
+
+\subsubsection{Geometric}
+Geometric RVs for a fixed probability of success $p$ determine the probability that it takes a certain number of trials $i$ until we see our \textbf{first} success. If $\Geo{X}{p}$, then \[ \Pr{X = i} = (1-p)^{i-1} p. \]
+
+These variables are also cool because they are memoryless!
+
+\subsection{Joint Distributions}
+For two RVs $X$ and $Y$, their \textit{joint distribution} is denoted by the values $\Pr{X = a, Y = b}$ for all possible $a$ that $X$ can output and all possible $b$ that $Y$ can output. 
+
+Suppose from a joint distribution we want to retrieve a distribution of a single RV. How?
+\begin{definition}[Marginal distribution]
+    From a joint distribution, the distribution of a single RV is defined as its \textit{marginal distribution}. To calculate it, \[ \Pr{X = a} = \sum_{b} \Pr{X = a, Y = b} \]
+\end{definition}
+
+\begin{definition}[Independence]
+    For \textit{independence} in a joint distribution setting, we must have \[ \Pr{X = a, Y = b} = \Pr{X = a} \Pr{Y = b}. \]
+\end{definition}
+
+\subsection{Expectation}
+\begin{definition}[Expected Value]
+    The \textit{expected value} of a random variable $X$, denoted $\E{X}$, is the anticipated average value of $X$. Mathematically, \[ \E{X} = \sum_{i \in \Omega} i \cdot \Pr{X = i}. \]
+\end{definition}
+
+\begin{example}
+    The expected value of a single fair dice roll is \begin{align*} \E{X} = \sum_{i \in \Omega} i \cdot \Pr{X = i} &= 1 \cdot \Pr{X = 1} + 2 \cdot \Pr{X = 2} + \ldots + 6 \cdot \Pr{X = 6} \\
+    &= 1 \cdot \frac{1}{6} + 2 \cdot \frac{1}{6} + \ldots + 6 \cdot \frac{1}{6} \\
+    &= \frac{7}{2} = 3.5
+    \end{align*} 
+\end{example}
+
+\subsubsection{Linearity of Expectation}
+For any random variables $X$ and $Y$, the property \[ \E{X+Y} = \E{X} + \E{Y} \] is always true and is often denoted \textit{linearity of expectation}. 
+
+A result of above is that for RV $X$ and constant $c$, we have $\E{cX} = c\E{X}$. Additionally, by definition $\E{c} = c$. 
