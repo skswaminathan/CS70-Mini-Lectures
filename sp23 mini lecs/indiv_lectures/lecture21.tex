@@ -1,0 +1,38 @@
+\section{DIS 11A (Conditional PMFs and Expectation)}
+
+Recall that in a joint setting, the principal of marginal distribution revolved around the idea of \[ \Pr{X = a} = \sum_{b} \Pr{X = a|Y = b} \Pr{Y = b}. \]
+
+We extend this idea (of total probability) now to expectation. For conditional expectation, we first require the conditional PMF. 
+
+\begin{definition}[Conditional PMF]
+    The \textit{conditional PMF} of a variable $X$ describes how it behaves conditioned with respect to $Y$. Mathematically, \[ \Pr{X=x|Y=y} = \frac{\Pr{X=x,Y=y}}{\Pr{Y=y}}. \]
+\end{definition}
+
+\begin{definition}[Conditional Expectation]
+    The \textit{conditional expectation} of $X$ given $Y = y$ is defined as \[ \E{X|Y=y} = \sum_{x} x \cdot \Pr{X = x | Y = y}\]
+\end{definition}
+
+If we apply the principal of marginal distribution to the conditional expectation above, we get \[ \sum_{y} \E{X|Y=y} = \E{X}. \]
+The result above is known as \textbf{law of iterated expectation}. Formally, it's defined as \[ \E{X} = \E{\E{X|Y}}. \]
+
+\textbf{Remark:} $\E{X|Y}$ is a function in terms of $Y$. 
+
+\subsection{EV/Variance Recap}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline 
+        $X$ & $\E{X}$ & $\Var{X}$ \\
+        \hline
+        $\text{Bernoulli}(p)$ & $p$ & $p(1-p)$ \\
+        \hline
+        $\text{Binomial}(n,p)$ & $np$ & $np(1-p)$ \\
+        \hline
+        $\text{Geometric}(p)$ & $\frac{1}{p}$ & $\frac{1-p}{p^2}$ \\
+        \hline
+        $\text{Poisson}(\lambda)$ & $\lambda$ & $\lambda$ \\
+        \hline
+        $\text{Uniform}(a,b)$ & $\frac{a+b}{2}$ & $\frac{b^2-a^2}{12}$ \\
+        \hline
+    \end{tabular}
+\end{center}
