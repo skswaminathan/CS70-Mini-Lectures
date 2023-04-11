@@ -12,7 +12,7 @@ We extend this idea (of total probability) now to expectation. For conditional e
     The \textit{conditional expectation} of $X$ given $Y = y$ is defined as \[ \E{X|Y=y} = \sum_{x} x \cdot \Pr{X = x | Y = y}\]
 \end{definition}
 
-If we apply the principal of marginal distribution to the conditional expectation above, we get \[ \sum_{y} \E{X|Y=y} = \E{X}. \]
+If we apply the principal of marginal distribution to the conditional expectation above, we get \[ \sum_{y} \E{X|Y=y}\Pr{Y=y} = \E{X}. \]
 The result above is known as \textbf{law of iterated expectation}. Formally, it's defined as \[ \E{X} = \E{\E{X|Y}}. \]
 
 \textbf{Remark:} $\E{X|Y}$ is a function in terms of $Y$. 
