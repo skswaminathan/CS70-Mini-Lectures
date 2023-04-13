@@ -1,0 +1,29 @@
+\section{DIS 11B (Concentration Inequalities)}
+
+\subsection{Markov's Inequality}
+For nonnegative random variable $X$, Markov's inequality tells us \[ \Pr{X \ge a} \le \frac{\E{X}}{a}. \]
+
+To use Markov's inequality we only need two pieces of information:
+\begin{itemize}
+    \item $X$ is nonnegative 
+    \item Know what $\E{X}$ is
+\end{itemize}
+
+\subsection{Chebyshev's Inequality}
+For positive constant $c$, Chebyshev's Inequality tells us \[ \Pr{|X-\E{X}| \ge c} \le \frac{\Var{X}}{c^2}. \]
+
+Chebyshev's inequality is stronger than Markov's inequality. 
+To use Chebyshev's inequality we need three pieces of information:
+\begin{itemize}
+    \item $c$ is positive
+    \item Know what $\E{X}$ is
+    \item Know what $\Var{X}$ is
+\end{itemize}
+
+An interesting fact we should consider when trying to use Chebyshev is the following. \[ \Pr{X - a \ge b} \le \Pr{|X-a| \ge b}. \] This is because the solutions to $x - a \ge b$ for $x$ are a subset of the solutions to $|x-a| \ge b$ for $x$. 
+
+\subsection{Law of Large Numbers}
+
+\begin{theorem}[Law of Large Numbers (LLN)]
+    For a sequence of i.i.d (independent and identically distributed) random variables $X_i$ with finite expectation $\E{X} < \infty$, we note the following: for any $\epsilon > 0$, defining $S_n = X_1 + X_2 + \ldots + X_n$, \[ \Pr{\left|\frac{S_n}{n} - \E{X}\right| < \epsilon} \to 1 \] as $n \to \infty$. 
+\end{theorem}
