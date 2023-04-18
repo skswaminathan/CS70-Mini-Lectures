@@ -1,0 +1,48 @@
+\section{DIS 13A (Continuous Probability)}
+
+So far we've looked at discrete systems and distributions. Today, we turn our focus more towards continuous models. 
+
+\subsection{Important Definitions}
+
+\begin{definition}[Probability Density Function (PDF)]
+    The \textit{probability density function (pdf)} of a random variable $X$ is a function $f: \R \to \R$ where \begin{itemize}
+        \item ($\forall x \in \R) f(x) \ge 0$
+        \item $\int_{-\infty}^{\infty} f(x) \di x = 1$.
+    \end{itemize}
+\end{definition}
+
+Visually, $\Pr{a \le X \le b} = \int_{a}^{b} f(x) \di x.$
+
+\textbf{BEWARE:} Tricky nuance about continuous distributions is that $\Pr{X = a} = 0$. This is why we always look at probability of $X$ in a range and not at a singular point. 
+
+\begin{definition}[Cumulative Density Function (CDF)]
+    The \textit{cumulative density function (cdf)} of a random variable $X$ is a function $F$ where \[ F(x) = \Pr{X \le x} = \int_{-\infty}^{x} f(z) \di z. \]
+\end{definition}
+
+(draw the visuals for both cdf and pdf)
+
+\textbf{IMPORTANT RELATION}: $\displaystyle f(x) = \frac{\di}{\di x} F(x)$. In words, the PDF is equal to the derivative of the CDF. 
+
+\subsection{Expectation}
+We extend the definition of expectation to \[ \E{X} = \int_{-\infty}^{\infty} x \cdot f_{X}(x) \di x \] where $f_X(x)$ is the pdf of $X$. 
+
+\subsection{Discrete vs Continuous}
+\begin{tabular}{|c|c|c|}
+    \hline
+    Concept & Discrete & Continuous \\
+    \hline 
+    PDF/PMF & $\Pr{X = x}$ & $f_X(x)$ \\
+    \hline 
+    CDF & $\Pr{X \le x}$ & $F(x)$ \\ 
+    \hline 
+    Expectation & $\sum_{x} x \Pr{x=x}$ & $\int_{-\infty}^{\infty} x \cdot f_{X}(x) \di x$ \\
+    \hline 
+    Variance & $\sum_{x} x^2 \Pr{x=x} - \left(\sum_{x} x \Pr{x=x}\right)^2$ & $\int_{-\infty}^{\infty} x^2 \cdot f_{X}(x) \di x - \left(\int_{-\infty}^{\infty} x \cdot f_{X}(x) \di x\right)^2$\\
+    \hline 
+    Joint Distribution & $\Pr{X=a, Y=b}$ & $\Pr{a \le X \le b, c \le Y \le d}$ \\
+    \hline 
+    Independence & $\Pr{X=x, Y=y} = \Pr{X=x}\Pr{Y=y}$ & $f_{X,Y}(x,y) = f_X(x) f_Y(y)$ \\ 
+    \hline
+\end{tabular}
+
+We'll update our table of expectation/variance of well known distributions on Thursday. 
