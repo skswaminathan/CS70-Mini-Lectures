@@ -47,4 +47,62 @@ We extend the definition of expectation to \[ \E{X} = \int_{-\infty}^{\infty} x 
     \hline
 \end{tabular}
 
-We'll update our table of expectation/variance of well known distributions on Thursday. 
+\subsection{Exponential Distribution}
+
+The exponential distribution is the continuous analog of the geometric distribution. Represents the idea of a ``first arrival'' and also adheres to the memoryless property. Note that $\lambda$ here can be interpreted as the rate of arrival. 
+
+For a random variable $\Expo{X}{\lambda}$, the relevant things we have are \begin{align*} F(x) &= \Pr{X \le x} = 1 - e^{-\lambda x} \\ f_X(x) &= \frac{\di}{\di x} F(x) = \lambda e^{-\lambda x} \\ \E{X} &= \frac{1}{\lambda} \\ \Var{X} &= \frac{1}{\lambda^2}. \end{align*}
+
+\subsection{Big Recap}
+\subsubsection{EV/Variance}
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline 
+        $X$ & $\E{X}$ & $\Var{X}$ \\
+        \hline
+        $\text{Bernoulli}(p)$ & $p$ & $p(1-p)$ \\
+        \hline
+        $\text{Binomial}(n,p)$ & $np$ & $np(1-p)$ \\
+        \hline
+        $\text{Geometric}(p)$ & $\frac{1}{p}$ & $\frac{1-p}{p^2}$ \\
+        \hline
+        $\text{Poisson}(\lambda)$ & $\lambda$ & $\lambda$ \\
+        \hline
+        $\text{DUniform}(a,b)$ & $\frac{a+b}{2}$ & ? \\
+        \hline
+        $\text{CUniform}(a,b)$ & $\frac{a+b}{2}$ & $\frac{b^2-a^2}{12}$ \\
+        \hline
+        $\text{Exponential}(\lambda)$ & $\frac{1}{\lambda}$ & $\frac{1}{\lambda^2}$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Discrete distributions}
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline 
+        $X$ & $\Pr{X = i}$ \\
+        \hline
+        $\text{Binomial}(n,p)$ & $\binom{n}{i} p^i (1-p)^n-i$ \\
+        \hline
+        $\text{Geometric}(p)$ & $p(1-p)^{i-1}$ \\
+        \hline
+        $\text{Poisson}(\lambda)$ & $\frac{\lambda^i}{i!}e^{-\lambda}$ \\
+        \hline
+        $\text{DUniform}(a,b)$ & $\frac{1}{b-a}$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Continuous distributions}
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        $X$ & $f_X(X)$ & $F(X)$ \\
+        \hline 
+        $\text{Uniform}(a,b)$ & $\frac{1}{b-a}$ & $\frac{x}{b-a}$ \\
+        \hline
+        $\text{Exponential}(\lambda)$ & $\lambda e^{-\lambda x}$ & $1 - e^{-\lambda x}$ \\
+        \hline
+    \end{tabular}
+\end{center}
