@@ -1,0 +1,37 @@
+\section{DIS 13B (Gaussian Distribution and CLT)}
+
+\subsection{Gaussian Distribution}
+
+This is the last form of continuous distributions we will look at in this class. 
+
+A random variable of the form $\Normal{X}{\mu}{\sigma^2}$ is called a normal/gaussian random variable. It has the following properties \begin{align*}
+    \E{X} &= \mu \\
+    \Var{X} &= \sigma^2 \\ 
+    f_X(x) &= \frac{1}{\sqrt{2\pi\sigma^2}}e^{-(x-\mu)^2/(2\sigma^2)}
+\end{align*}
+where $f_X(x)$ is the pdf of $X$. 
+
+\begin{definition}[Unit Normal Distribution]
+    Special case of the normal distribution where $\mu = 0$ and $\sigma^2 = 1$. We generally use the letter $Z$ to denote a distribution of this form: $\Normal{Z}{0}{1}$. 
+\end{definition}
+
+We can talk about normalizing a distribution $X$, this is trying to write it in terms of $Z$.
+
+If $\Normal{X}{\mu}{\sigma^2}$, then \[ \frac{X - \mu}{\sigma} = \Normal{Z}{0}{1}. \]
+
+The expression above can be rewritten as $X = \sigma Z + \mu$. This just highlights another way to decompose a normal distribution $X$ in terms of the unit normal distribution. 
+
+Scaling a distribution: for a constant $c$, if $\Normal{X}{\mu}{\sigma^2}$, then $\Normal{cX}{c\mu}{c^2\sigma^2}$. 
+
+\begin{theorem}
+    The sum of independent normal distributions is also a normal distribution. Namely, if $\Normal{X}{\mu_x}{\sigma^2_x}$ and $\Normal{Y}{\mu_y}{\sigma^2_y}$ are independent, then $\Normal{X+Y}{\mu_x+\mu_y}{\sigma^2_x+\sigma^2_y}$. 
+\end{theorem}
+
+\subsection{Central Limit Theorem (CLT)}
+Last week, we looked at LLN which said that the probability of any small $\epsilon$ deviation of the sample average from the mean tends to 0 as the number of samples tends to infinity. Today, we look at something \textit{stronger}. 
+
+\begin{theorem}[Central Limit Theorem]
+    Let $X_1, \ldots, X_n$ be i.i.d random variables with $\E{X_i} = \mu < \infty$ and $\Var{X_i} = \sigma^2 < \infty$. Define $S_n = X_1 + \ldots + X_n$. Then, \[ \frac{S_n - n \mu}{\sigma \sqrt{n}} \to \mathcal{N}(0, 1) \] as $n \to \infty$. 
+\end{theorem}
+
+\textbf{Remark:} The CLT is not only for normal distributions. It works for any i.i.d random variables with the same (finite) expectation and same (finite) variance. 
